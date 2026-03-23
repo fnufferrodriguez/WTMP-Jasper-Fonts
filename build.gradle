@@ -1,0 +1,24 @@
+plugins {
+    id "wtmp.deps-conventions"
+    id "wtmp.publishing-conventions"
+    id "wtmp.versioning-conventions"
+}
+
+allprojects {
+    group = 'gov.usbr'
+    version = '1.0'
+}
+
+def jarFile = file('dist/usbr-jasper-fonts-1.0.jar')
+
+publishing {
+    publications {
+        mavenJarOnly(MavenPublication) {
+            artifactId = "usbr-jasper-fonts"
+            artifact(jarFile) {
+                extension 'jar'
+            }
+
+        }
+    }
+}
