@@ -77,3 +77,8 @@ Images/**
 CSVData/**
 Datasources/USBRAutomatedReportOutput.xml
 
+# jars we need
+!dist/
+!dist/usbr-jasper-fonts-1.0.jar
+!gradle/wrapper/gradle-wrapper.jar
+
