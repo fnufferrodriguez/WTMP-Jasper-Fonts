@@ -6,7 +6,7 @@ plugins {
 
 allprojects {
     group = 'gov.usbr'
-    version = '1.0'
+    version = versionConventions.getConventionVersion()
 }
 
 def jarFile = file('dist/usbr-jasper-fonts-1.0.jar')
