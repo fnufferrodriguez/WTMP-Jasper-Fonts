@@ -1,5 +1,6 @@
 plugins {
     id "wtmp.deps-conventions"
+    id "wtmp.java-conventions"
     id "wtmp.publishing-conventions"
     id "wtmp.versioning-conventions"
 }
@@ -9,16 +10,11 @@ allprojects {
     version = versionConventions.getConventionVersion()
 }
 
-def jarFile = file('dist/usbr-jasper-fonts-1.0.jar')
-
 publishing {
     publications {
-        mavenJarOnly(MavenPublication) {
+        mavenJava(MavenPublication) {
             artifactId = "usbr-jasper-fonts"
-            artifact(jarFile) {
-                extension 'jar'
-            }
-
+            from components.java
         }
     }
 }
